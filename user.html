@@ -137,7 +137,8 @@
                           src="/vite-feature-bootstrap5/assets/avatar-QGHQ479s.png"
                           alt="user-photo"
                         />
-                        <button
+
+                        <label
                           class="btn btn-outline-secondary rounded-4 text-dark"
                         >
                           <span
@@ -145,7 +146,8 @@
                           >
                             file_upload </span
                           >更新頭貼
-                        </button>
+                          <input type="file" hidden />
+                        </label>
                       </div>
                       <!-- 姓名 -->
                       <div class="mb-4">
@@ -157,7 +159,7 @@
                             placeholder="姓名"
                             value="Mokumaru"
                           />
-                          <label for="works">姓名</label>
+                          <label for="name">姓名</label>
                         </div>
                       </div>
                       <!-- 性別 -->
@@ -169,11 +171,11 @@
                               class="form-check-input"
                               type="radio"
                               name="Gender"
-                              id="Gender-1"
-                              value="Gender-1"
+                              id="Female"
+                              value="Female"
                               checked
                             />
-                            <label class="form-check-label" for="Gender-1">
+                            <label class="form-check-label" for="Female">
                               女性
                             </label>
                           </div>
@@ -182,10 +184,10 @@
                               class="form-check-input"
                               type="radio"
                               name="Gender"
-                              id="Gender-2"
-                              value="Gender-2"
+                              id="Male"
+                              value="Male"
                             />
-                            <label class="form-check-label" for="Gender-2"
+                            <label class="form-check-label" for="Male"
                               >男性
                             </label>
                           </div>
@@ -194,10 +196,12 @@
                               class="form-check-input"
                               type="radio"
                               name="Gender"
-                              id="Gender-3"
-                              value="Gender-3"
+                              id="Prefer-not-to-say "
+                              value="Prefer-not-to-say "
                             />
-                            <label class="form-check-label" for="Gender-3"
+                            <label
+                              class="form-check-label"
+                              for="Prefer-not-to-say "
                               >不願透露
                             </label>
                           </div>
@@ -207,25 +211,91 @@
                       <div class="mb-4">
                         <div class="form-floating">
                           <input
-                            type="text"
+                            type="date"
                             class="form-control"
                             id="birthday"
                             placeholder="生日"
-                            value="2000/01/10"
+                            value="2000-01-10"
                           />
                           <label for="birthday">生日</label>
                         </div>
                       </div>
                       <!-- 修改密碼 -->
                       <div class="mb-4">
-                        <p class="mb-2">性別</p>
-                        <button class="btn btn-outline-dark border rounded-4">
+                        <p class="mb-2">密碼</p>
+
+                        <!-- Button trigger modal -->
+                        <button
+                          type="button"
+                          class="btn btn-outline-dark border rounded-4"
+                          data-bs-toggle="modal"
+                          data-bs-target="#changePassword"
+                        >
                           修改密碼<span
                             class="material-icons-outlined ms-1 align-bottom"
                           >
                             keyboard_arrow_right
                           </span>
                         </button>
+                        <!-- Modal -->
+                        <div
+                          class="modal fade"
+                          id="changePassword"
+                          tabindex="-1"
+                          aria-labelledby="changePasswordLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5
+                                  class="modal-title"
+                                  id="changePasswordLabel"
+                                >
+                                  更新密碼
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="form-floating mb-4">
+                                  <input
+                                    type="password"
+                                    class="form-control"
+                                    id="floatingPassword"
+                                    placeholder="Password"
+                                  />
+                                  <label for="floatingPassword">新密碼</label>
+                                </div>
+                                <div class="form-floating">
+                                  <input
+                                    type="password"
+                                    class="form-control"
+                                    id="floatingPassword"
+                                    placeholder="Password"
+                                  />
+                                  <label for="floatingPassword">再次密碼</label>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-dark border rounded-4 px-3 py-2"
+                                >
+                                  更新密碼<span
+                                    class="material-icons-outlined ps-1 align-bottom"
+                                  >
+                                    chevron_right
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <!-- 信箱 -->
                       <div class="mb-4">
@@ -262,11 +332,11 @@
                           <input
                             type="text"
                             class="form-control"
-                            id="adress"
+                            id="address"
                             placeholder="通訊地址"
                             value="高雄市三民區九如一路 87 號"
                           />
-                          <label for="adress">通訊地址</label>
+                          <label for="address">通訊地址</label>
                         </div>
                       </div>
                     </div>

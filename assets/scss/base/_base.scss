@@ -1,31 +1,42 @@
 /* 標籤的基本樣式 */
 body {
-  font-family: "Noto Sans TC", sans-serif;
-  line-height: 1.5;
+  // font-family: "Noto Sans TC", sans-serif;
+  // line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #141a1f;
+  // color: #141a1f;
 }
 
 img {
   max-width: 100%;
   height: auto;
 }
+// 可以用.img-fluid ， 一樣效果
 
 a {
   display: inline-block;
-  text-decoration: none;
+  // text-decoration: none;
   color: inherit;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0;
+.custom-icon-size {
+  font-size: 20px;
+}
+.badge-required {
+  color: #fcfcfd;
+  padding: 4px 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
-p {
-  margin-bottom: 0;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin-bottom: 0;
+// }
+
+// p {
+//   margin-bottom: 0;
+// }
